@@ -12,19 +12,19 @@ abstract class Animal {
     public boolean Swim;
 
     public abstract void getName();
-
-    public interface AbleToMakeFly {
-        public void makeFly();
-    }
-    public interface AbleToMakeRun {
-        public void makeRun();
-    }
-    public interface AbleToMakeSwim {
-        public void makeSwim();
-    }
 }
 
-class Squirrel extends Animal implements Animal.AbleToMakeFly, Animal.AbleToMakeRun, Animal.AbleToMakeSwim {
+    interface AbleToMakeFly {
+        public void makeFly();
+    }
+    interface AbleToMakeRun {
+        public void makeRun();
+    }
+    interface AbleToMakeSwim {
+        public void makeSwim();
+    }
+
+class Squirrel extends Animal implements AbleToMakeFly, AbleToMakeRun, AbleToMakeSwim {
 
     public String name = "Fox";
     public String family = "Squirrel";
@@ -50,7 +50,7 @@ class Squirrel extends Animal implements Animal.AbleToMakeFly, Animal.AbleToMake
     }
 }
 
-class Chipmunk extends Animal implements Animal.AbleToMakeFly, Animal.AbleToMakeRun, Animal.AbleToMakeSwim {
+class Chipmunk extends Animal implements AbleToMakeFly, AbleToMakeRun, AbleToMakeSwim {
 
     public String name = "Nox";
     public String family = "Chipmunk";
